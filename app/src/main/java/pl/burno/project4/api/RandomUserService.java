@@ -1,6 +1,6 @@
-package pl.burno.project4.model.api;
+package pl.burno.project4.api;
 
-import pl.burno.project4.model.api.response.RandomPeople;
+import pl.burno.project4.model.RandomPeople;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;

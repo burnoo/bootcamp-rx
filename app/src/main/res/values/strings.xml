@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Random User</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
     <string name="load_new">Load new user</string>
     <string name="toast_error">Podczas połączenia wystąpił błąd: %s</string>
     <string name="text_view_error">Wystąpił błąd</string>
+    <string name="person_name">%1$s %2$s</string>
 </resources>
