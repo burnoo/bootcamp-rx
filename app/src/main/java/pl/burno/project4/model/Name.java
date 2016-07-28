@@ -16,5 +16,4 @@ public class Name
     @SerializedName("last")
     @Expose
     public String last;
-
 }

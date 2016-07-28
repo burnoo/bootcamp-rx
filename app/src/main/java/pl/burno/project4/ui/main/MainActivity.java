@@ -17,12 +17,14 @@ import pl.burno.project4.model.RandomPerson;
 public class MainActivity extends AppCompatActivity implements MainView
 {
     private final String TAG = "aaa";
-    @Bind(R.id.textView)
+    @Bind(R.id.personTextView)
     TextView mTextView;
     @Bind(R.id.imageView)
     ImageView mImageView;
     @Bind(R.id.button)
     Button mLoadButton;
+    @Bind(R.id.populationTextView)
+    TextView populationTextView;
 
     private MainPresenter mPresenter;
 
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements MainView
     public void updateView(RandomPerson randomPerson)
     {
         mTextView.setText(String.format(getString(R.string.person_name), randomPerson.name.first, randomPerson.name.last));
+        populationTextView.setText(String.format(getString(R.string.population), randomPerson.location.city, randomPerson.location.population));
         Picasso.with(this).load(String.format("https://api.adorable.io/avatars/285/%s@%s.png", randomPerson.name.first, randomPerson.name.last)).into(mImageView);
     }
 }

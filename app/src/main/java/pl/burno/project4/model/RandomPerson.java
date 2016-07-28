@@ -11,4 +11,7 @@ public class RandomPerson
     @Expose
     public Name name;
 
+    @SerializedName("location")
+    @Expose
+    public Location location = new Location();
 }

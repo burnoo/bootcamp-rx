@@ -6,5 +6,4 @@ public interface MainView
 {
     void showError(Throwable error);
     void updateView(RandomPerson randomPerson);
-
 }
