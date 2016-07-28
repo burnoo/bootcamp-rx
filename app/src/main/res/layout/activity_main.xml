@@ -10,8 +10,28 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ui.MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
     <TextView
+        android:id="@+id/textView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="@string/loading"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/load_new"
+        android:id="@+id/button"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

@@ -1,4 +1,3 @@
-
 package pl.burno.project4.model.api.response;
 
 
