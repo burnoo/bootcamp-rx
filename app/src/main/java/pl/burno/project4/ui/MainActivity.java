@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity
     private void loadRandomPerson()
     {
         mTextView.setText(R.string.loading);
-        mSubscription = .getRandomPeople(500)
+        mSubscription = mRandomUserService.getRandomPeople(500)
                 .map(randomPeople -> randomPeople.people)
                 .flatMap(randomPeople -> Observable.from(randomPeople))
                 .filter(randomPerson -> randomPerson.name.first.charAt(0) == 'j')
