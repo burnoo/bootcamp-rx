@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.button)
     Button mLoadButton;
     private Subscription mSubscription;
+    private RandomUserService mRandomUserService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity
     protected void onStart()
     {
         super.onStart();
+        mRandomUserService = new RandomUserService();
         loadRandomPerson();
     }
 
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity
     private void loadRandomPerson()
     {
         mTextView.setText(R.string.loading);
-        mSubscription = new RandomUserService().getRandomPeople(500)
+        mSubscription = .getRandomPeople(500)
                 .map(randomPeople -> randomPeople.people)
                 .flatMap(randomPeople -> Observable.from(randomPeople))
                 .filter(randomPerson -> randomPerson.name.first.charAt(0) == 'j')

@@ -7,7 +7,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class Name
 {
-
     @SerializedName("title")
     @Expose
     public String title;
