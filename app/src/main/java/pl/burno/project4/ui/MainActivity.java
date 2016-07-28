@@ -13,7 +13,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import pl.burno.project4.R;
 import pl.burno.project4.model.api.RandomUserService;
-import pl.burno.project4.model.api.response.Person;
+import pl.burno.project4.model.api.response.RandomPerson;
 import rx.Observable;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
@@ -80,9 +80,9 @@ public class MainActivity extends AppCompatActivity
         mLoadButton.setOnClickListener(view -> loadRandomPerson());
     }
 
-    private void updateView(Person person)
+    private void updateView(RandomPerson randomPerson)
     {
-        mTextView.setText(person.name.first + " " + person.name.last);
-        Picasso.with(this).load("https://api.adorable.io/avatars/285/" + person.name.first + "@" + person.name.last + ".png").into(mImageView);
+        mTextView.setText(randomPerson.name.first + " " + randomPerson.name.last);
+        Picasso.with(this).load("https://api.adorable.io/avatars/285/" + randomPerson.name.first + "@" + randomPerson.name.last + ".png").into(mImageView);
     }
 }

@@ -12,6 +12,6 @@ public class RandomPeople
 
     @SerializedName("results")
     @Expose
-    public List<Person> people = new ArrayList<Person>();
+    public List<RandomPerson> people = new ArrayList<RandomPerson>();
 
 }
